@@ -1,6 +1,7 @@
 package com.javaexpress.dto;
 
-import com.javaexpress.models.RoleBaseAuthorty;
+
+import com.javaexpress.models.RoleBasedAuthority;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,10 +10,10 @@ import lombok.Setter;
 @Setter
 @Getter
 @NoArgsConstructor
+
 public class CredentialDto { 
 	
 	private String userName;
 	private String password;
-	private RoleBaseAuthorty roleBaseAuthorty;
-
+	private RoleBasedAuthority roleBasedAuthority;
 }

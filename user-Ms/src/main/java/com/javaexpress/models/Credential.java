@@ -32,7 +32,7 @@ public class Credential {
 	
 	@Enumerated(EnumType.STRING)
 	@Column(name = "role")
-	private RoleBaseAuthorty roleBaseAuthorty;
+	private RoleBasedAuthority roleBasedAuthority;
 	
 	@JsonIgnore // tells jackson not to incloud this field in json output
 	@OneToOne(fetch = FetchType.LAZY)

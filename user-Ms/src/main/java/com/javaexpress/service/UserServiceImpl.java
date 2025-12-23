@@ -31,21 +31,16 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public User findById(Integer userId) {
-		// TODO Auto-generated method stub
-		return null;
+	public UserDto findById(Integer userId) {
+		return userRepository.findById(userId).map(userMapper::toDto)
+				   .orElseThrow(() -> new RuntimeException("User Not found in Db"));
 	}
 
 	@Override
-	public User update(Integer userId, User user) {
+	public UserDto update(Integer userId, UserDto user) {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	@Override
-	public void deleteBy(Integer userId) {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
+
